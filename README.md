@@ -32,7 +32,7 @@
 
 本项目采取GitHub开源方式，使用Apache2.0开源协议。
 
-GitHub地址：
+GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 
 ## 2.总体要求
 
@@ -158,8 +158,11 @@ GitHub地址：
 
 #### 3.3.11 报表功能（中）
 
-- 使用可视化图形界面
+- 使用Echarts`做数据可视化
 - 根据脚本返回的数据（会存入mysql）生成页面图表
+- 参考文章
+  - https://blog.csdn.net/QQ6550523/article/details/106930211/?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-2&spm=1001.2101.3001.4242
+  - https://blog.csdn.net/shiyu1157758655/article/details/107950233
 
 #### 3.3.12 邮件发送（中）
 
