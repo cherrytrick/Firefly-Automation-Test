@@ -118,10 +118,16 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 
 - 使用Redis作为服务中介或使用go开发一个简易kv数据库作为服务中介
 - go中文网有go实现一个Redis的例子
+- 参考链接
+  - https://github.com/HDT3213/godis
 
 #### 3.3.4 本地消息队列（中）
 
 - 每个节点中的ffagent内置一个本地消息队列，用来缓存和队列执行分发的任务
+- 参考资料
+  - https://www.cnblogs.com/asong2020/articles/13697817.html
+  - https://blog.csdn.net/xuandaijian/article/details/107925860
+  - https://www.yuque.com/tal-tech/go-zero/iwimew
 
 #### 3.3.5 任务调度（高）
 
@@ -136,6 +142,8 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 #### 3.3.7 压力测试（高）
 
 - 使用go的多线程并发技术完成高性能的压力测试
+- 参考资料
+  - https://github.com/link1st/go-stress-testing
 
 #### 3.3.8 WEB测试（中）
 
@@ -150,6 +158,8 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - 支持多协议，多请求格式的自定义推送
 - 参考swgger的支持形式
 - 最好可以将swgger集成
+- 参考资料
+  - https://www.jianshu.com/p/c3b8c06166b9?from=timeline&isappinstalled=0
 
 #### 3.3.10 测试用例管理（高）
 
@@ -158,7 +168,7 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 
 #### 3.3.11 报表功能（中）
 
-- 使用Echarts`做数据可视化
+- 使用`Echarts`做数据可视化
 - 根据脚本返回的数据（会存入mysql）生成页面图表
 - 参考文章
   - https://blog.csdn.net/QQ6550523/article/details/106930211/?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-2&spm=1001.2101.3001.4242
@@ -189,6 +199,8 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 
 - 使用Gin 作为web服务
 - 与blockly配合使用
+- 参考资料
+  - https://www.jianshu.com/p/98965b3ff638/
 
 #### 3.3.17 golang调用python脚本（高）
 
