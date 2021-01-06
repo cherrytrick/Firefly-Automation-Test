@@ -216,6 +216,9 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - 考虑如何在项目启动的时候，确保每个节点都有正确的脚本文件
 - 防止重复分发
 - 压缩传输
+- 参考资料
+  - https://www.cnblogs.com/pengshaomin/p/13081047.html
+  - https://studygolang.com/articles/9350
 
 ### 3.4 数据库设计
 
