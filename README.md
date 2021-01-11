@@ -120,6 +120,7 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - go中文网有go实现一个Redis的例子
 - 参考链接
   - https://github.com/HDT3213/godis
+  - https://github.com/roseduan/rosedb
 
 #### 3.3.4 本地消息队列（中）
 
@@ -210,6 +211,7 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - 参考文章
   - https://studygolang.com/articles/20011
   - https://blog.csdn.net/hjx_dou/article/details/108105895
+  - https://zhuanlan.zhihu.com/p/75441551
 
 #### 3.3.18 分发python脚本（高）
 
