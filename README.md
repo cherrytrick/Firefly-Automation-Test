@@ -179,6 +179,8 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 
 - 自动化测试结果通知
 - bug通知开发人员
+- 参考文章
+  - https://github.com/emersion/go-smtp-proxyhttps://github.com/emersion/go-smtp-proxy
 
 #### 3.3.13 环境支持（中）
 
