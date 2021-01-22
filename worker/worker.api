@@ -1,0 +1,32 @@
+
+
+
+type RequestBase {
+	//时间戳
+	timestamp string `json:"timestamp"`
+	//版本号
+	version string `json:"version"`
+	//token类型
+	token_type string `json:"tokenType"`
+	//token字符串
+	access_token string `json:"accessToken"`
+}
+
+type ResponseBase {
+	//返回数据
+	data string `json:"data"`
+	//返回状态
+	status int `json:"status"`
+	//状态码
+	status_code int `json:"statusCode"`
+	//错误信息
+	error_msg string `json:"errorMsg"`
+}
+
+
+
+
+service worker-api {
+	@handler WorkerHandler
+	post /woker/exec(RequestBase) returns (ResponseBase);
+}
