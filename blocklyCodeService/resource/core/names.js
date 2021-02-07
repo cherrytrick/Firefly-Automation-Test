@@ -17,7 +17,7 @@ goog.require('Blockly.Msg');
 
 
 /**
- * Class for a database of entity names (variables, functions, etc).
+ * Class for a database of database names (variables, functions, etc).
  * @param {string} reservedWords A comma-separated string of words that are
  *     illegal for use as names in a language (e.g. 'new,if,this,...').
  * @param {string=} opt_variablePrefix Some languages need a '$' or a namespace
@@ -98,11 +98,11 @@ Blockly.Names.prototype.getNameForUserVariable_ = function(id) {
 };
 
 /**
- * Convert a Blockly entity name to a legal exportable entity name.
- * @param {string} name The Blockly entity name (no constraints).
- * @param {string} type The type of entity in Blockly
+ * Convert a Blockly database name to a legal exportable database name.
+ * @param {string} name The Blockly database name (no constraints).
+ * @param {string} type The type of database in Blockly
  *     ('VARIABLE', 'PROCEDURE', 'BUILTIN', etc...).
- * @return {string} An entity name that is legal in the exported language.
+ * @return {string} An database name that is legal in the exported language.
  */
 Blockly.Names.prototype.getName = function(name, type) {
   if (type == Blockly.VARIABLE_CATEGORY_NAME) {
@@ -126,14 +126,14 @@ Blockly.Names.prototype.getName = function(name, type) {
 };
 
 /**
- * Convert a Blockly entity name to a legal exportable entity name.
+ * Convert a Blockly database name to a legal exportable database name.
  * Ensure that this is a new name not overlapping any previously defined name.
  * Also check against list of reserved words for the current language and
  * ensure name doesn't collide.
- * @param {string} name The Blockly entity name (no constraints).
- * @param {string} type The type of entity in Blockly
+ * @param {string} name The Blockly database name (no constraints).
+ * @param {string} type The type of database in Blockly
  *     ('VARIABLE', 'PROCEDURE', 'BUILTIN', etc...).
- * @return {string} An entity name that is legal in the exported language.
+ * @return {string} An database name that is legal in the exported language.
  */
 Blockly.Names.prototype.getDistinctName = function(name, type) {
   var safeName = this.safeName_(name);
@@ -152,11 +152,11 @@ Blockly.Names.prototype.getDistinctName = function(name, type) {
 };
 
 /**
- * Given a proposed entity name, generate a name that conforms to the
+ * Given a proposed database name, generate a name that conforms to the
  * [_A-Za-z][_A-Za-z0-9]* format that most languages consider legal for
  * variables.
- * @param {string} name Potentially illegal entity name.
- * @return {string} Safe entity name.
+ * @param {string} name Potentially illegal database name.
+ * @return {string} Safe database name.
  * @private
  */
 Blockly.Names.prototype.safeName_ = function(name) {
@@ -176,7 +176,7 @@ Blockly.Names.prototype.safeName_ = function(name) {
 };
 
 /**
- * Do the given two entity names refer to the same entity?
+ * Do the given two database names refer to the same database?
  * Blockly names are case-insensitive.
  * @param {string} name1 First name.
  * @param {string} name2 Second name.

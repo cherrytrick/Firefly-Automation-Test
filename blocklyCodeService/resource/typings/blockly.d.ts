@@ -7658,7 +7658,7 @@ declare module Blockly {
     class Names__Class  { 
     
             /**
-             * Class for a database of entity names (variables, functions, etc).
+             * Class for a database of database names (variables, functions, etc).
              * @param {string} reservedWords A comma-separated string of words that are
              *     illegal for use as names in a language (e.g. 'new,if,this,...').
              * @param {string=} opt_variablePrefix Some languages need a '$' or a namespace
@@ -7679,23 +7679,23 @@ declare module Blockly {
             setVariableMap(map: Blockly.VariableMap): void;
     
             /**
-             * Convert a Blockly entity name to a legal exportable entity name.
-             * @param {string} name The Blockly entity name (no constraints).
-             * @param {string} type The type of entity in Blockly
+             * Convert a Blockly database name to a legal exportable database name.
+             * @param {string} name The Blockly database name (no constraints).
+             * @param {string} type The type of database in Blockly
              *     ('VARIABLE', 'PROCEDURE', 'BUILTIN', etc...).
-             * @return {string} An entity name that is legal in the exported language.
+             * @return {string} An database name that is legal in the exported language.
              */
             getName(name: string, type: string): string;
     
             /**
-             * Convert a Blockly entity name to a legal exportable entity name.
+             * Convert a Blockly database name to a legal exportable database name.
              * Ensure that this is a new name not overlapping any previously defined name.
              * Also check against list of reserved words for the current language and
              * ensure name doesn't collide.
-             * @param {string} name The Blockly entity name (no constraints).
-             * @param {string} type The type of entity in Blockly
+             * @param {string} name The Blockly database name (no constraints).
+             * @param {string} type The type of database in Blockly
              *     ('VARIABLE', 'PROCEDURE', 'BUILTIN', etc...).
-             * @return {string} An entity name that is legal in the exported language.
+             * @return {string} An database name that is legal in the exported language.
              */
             getDistinctName(name: string, type: string): string;
     } 
@@ -7714,7 +7714,7 @@ declare module Blockly.Names {
     var DEVELOPER_VARIABLE_TYPE: any /*missing*/;
 
     /**
-     * Do the given two entity names refer to the same entity?
+     * Do the given two database names refer to the same database?
      * Blockly names are case-insensitive.
      * @param {string} name1 First name.
      * @param {string} name2 Second name.

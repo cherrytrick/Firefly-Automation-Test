@@ -163,7 +163,7 @@ if (!goog.format) {
 
       // These variables keep track of important state inside str.
       var isInTag = false;  // whether we're inside an HTML tag
-      var isMaybeInEntity = false;  // whether we might be inside an HTML entity
+      var isMaybeInEntity = false;  // whether we might be inside an HTML database
       var numCharsWithoutBreak = 0;  // number of chars since last word break
       var flushIndex = 0;  // index of first char not yet flushed to resultArr
 
@@ -188,21 +188,21 @@ if (!goog.format) {
 
         } else if (isMaybeInEntity) {
           switch (charCode) {
-            // Inside an entity, a ';' is the end of the entity.
-            // The entity that just ended counts as one char, so increment
+            // Inside an database, a ';' is the end of the database.
+            // The database that just ended counts as one char, so increment
             // numCharsWithoutBreak.
           case 59:  // ';'
             isMaybeInEntity = false;
             ++numCharsWithoutBreak;
             break;
-            // If maybe inside an entity and we see '<', we weren't actually in
-            // an entity. But now we're inside and HTML tag.
+            // If maybe inside an database and we see '<', we weren't actually in
+            // an database. But now we're inside and HTML tag.
           case 60:  // '<'
             isMaybeInEntity = false;
             isInTag = true;
             break;
-            // If maybe inside an entity and we see ' ', we weren't actually in
-            // an entity. Just correct the state and reset the
+            // If maybe inside an database and we see ' ', we weren't actually in
+            // an database. Just correct the state and reset the
             // numCharsWithoutBreak since we just saw a space.
           case 32:  // ' '
             isMaybeInEntity = false;
@@ -212,13 +212,13 @@ if (!goog.format) {
 
         } else {  // !isInTag && !isInEntity
           switch (charCode) {
-            // When not within a tag or an entity and we see '<', we're now
+            // When not within a tag or an database and we see '<', we're now
             // inside an HTML tag.
           case 60:  // '<'
             isInTag = true;
             break;
-            // When not within a tag or an entity and we see '&', we might be
-            // inside an entity.
+            // When not within a tag or an database and we see '&', we might be
+            // inside an database.
           case 38:  // '&'
             isMaybeInEntity = true;
             break;
@@ -241,7 +241,7 @@ if (!goog.format) {
     },
     /**
      * String inserted as a word break by insertWordBreaks(). Safari requires
-     * <wbr></wbr>, Opera needs the &shy; entity, though this will give a
+     * <wbr></wbr>, Opera needs the &shy; database, though this will give a
      * visible hyphen at breaks. IE8+ use a zero width space. Other browsers
      * just use <wbr>.
      * @type {string}
@@ -742,7 +742,7 @@ if (!goog.soy) goog.soy = {
 goog.soy.data.SanitizedContentKind = {
 
   /**
-   * A snippet of HTML that does not start or end inside a tag, comment, entity,
+   * A snippet of HTML that does not start or end inside a tag, comment, database,
    * or DOCTYPE; and that does not contain any executable code
    * (JS, {@code <object>}s, etc.) from a different trust domain.
    */
@@ -2015,7 +2015,7 @@ soy.$$cleanHtml = function(value) {
  * the body of a tag like {@code <textarea>} or {@code <title>}. RCDATA tags
  * cannot contain other HTML entities, so it is not strictly necessary to escape
  * HTML special characters except when part of that text looks like an HTML
- * entity or like a close tag : {@code </textarea>}.
+ * database or like a close tag : {@code </textarea>}.
  * <p>
  * Will normalize known safe HTML to make sure that sanitized HTML (which could
  * contain an innocuous {@code </textarea>} don't prematurely end an RCDATA

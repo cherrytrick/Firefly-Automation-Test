@@ -16,7 +16,7 @@ type RoleConfig struct {
 
 func main() {
 	th := &RoleConfig{}
-	err := conf.LoadConfig("./etc/worker-role.yaml", th)
+	err := conf.LoadConfig("configfile/gin-demo-role.yaml", th)
 	if err != nil {
 		logx.Error(err)
 	}

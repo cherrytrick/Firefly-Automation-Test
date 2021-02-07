@@ -40,8 +40,6 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 
 ![avatar](http://assets.processon.com/chart_image/5fc9ccc3e0b34d4f98d0e2c2.png)
 
-
-
 ### 2.2 总体技术架构
 
 ![avatar](http://assets.processon.com/chart_image/5fc894d17d9c082f448bbb5f.png)
@@ -61,12 +59,12 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - 支持测试结果统计，生成图表
 - 部署支持Linux和windows双环境（服务器、个人PC）
 - ffagent自研分布式中间件
-  - 主从选举
-  - 消息队列
-  - 异步通信
-  - 心跳检测
-  - 任务调度
-  - 服务发现注册
+    - 主从选举
+    - 消息队列
+    - 异步通信
+    - 心跳检测
+    - 任务调度
+    - 服务发现注册
 
 ## 3.软件开发
 
@@ -96,7 +94,7 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 ### 3.3 详细设计
 
 - 优先度（高、中、低）
-  - 低优先度有可能会在选型或发现问题后移除
+    - 低优先度有可能会在选型或发现问题后移除
 
 #### 3.3.1 自动化脚本生成（高）
 
@@ -104,10 +102,10 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 
 - 二次开发blockly
 - blockly参考文章
-  - https://blog.csdn.net/benwdm/article/details/84910517?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-9.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-9.control
+    - https://blog.csdn.net/benwdm/article/details/84910517?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-9.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-9.control
 - playwright参考文章
-  - https://github.com/microsoft/playwright-python
-  - https://mp.weixin.qq.com/s/h-Jt1QDfYdx8Wmhmn8cuYg
+    - https://github.com/microsoft/playwright-python
+    - https://mp.weixin.qq.com/s/h-Jt1QDfYdx8Wmhmn8cuYg
 
 #### 3.3.2 节点通信（低）
 
@@ -119,16 +117,16 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - 使用Redis作为服务中介或使用go开发一个简易kv数据库作为服务中介
 - go中文网有go实现一个Redis的例子
 - 参考链接
-  - https://github.com/HDT3213/godis
-  - https://github.com/roseduan/rosedb
+    - https://github.com/HDT3213/godis
+    - https://github.com/roseduan/rosedb
 
 #### 3.3.4 本地消息队列（中）
 
 - 每个节点中的ffagent内置一个本地消息队列，用来缓存和队列执行分发的任务
 - 参考资料
-  - https://www.cnblogs.com/asong2020/articles/13697817.html
-  - https://blog.csdn.net/xuandaijian/article/details/107925860
-  - https://www.yuque.com/tal-tech/go-zero/iwimew
+    - https://www.cnblogs.com/asong2020/articles/13697817.html
+    - https://blog.csdn.net/xuandaijian/article/details/107925860
+    - https://www.yuque.com/tal-tech/go-zero/iwimew
 
 #### 3.3.5 任务调度（高）
 
@@ -144,7 +142,7 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 
 - 使用go的多线程并发技术完成高性能的压力测试
 - 参考资料
-  - https://github.com/link1st/go-stress-testing
+    - https://github.com/link1st/go-stress-testing
 
 #### 3.3.8 WEB测试（中）
 
@@ -160,7 +158,7 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - 参考swgger的支持形式
 - 最好可以将swgger集成
 - 参考资料
-  - https://www.jianshu.com/p/c3b8c06166b9?from=timeline&isappinstalled=0
+    - https://www.jianshu.com/p/c3b8c06166b9?from=timeline&isappinstalled=0
 
 #### 3.3.10 测试用例管理（高）
 
@@ -172,15 +170,15 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - 使用`Echarts`做数据可视化
 - 根据脚本返回的数据（会存入mysql）生成页面图表
 - 参考文章
-  - https://blog.csdn.net/QQ6550523/article/details/106930211/?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-2&spm=1001.2101.3001.4242
-  - https://blog.csdn.net/shiyu1157758655/article/details/107950233
+    - https://blog.csdn.net/QQ6550523/article/details/106930211/?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-2&spm=1001.2101.3001.4242
+    - https://blog.csdn.net/shiyu1157758655/article/details/107950233
 
 #### 3.3.12 邮件发送（中）
 
 - 自动化测试结果通知
 - bug通知开发人员
 - 参考文章
-  - https://github.com/emersion/go-smtp-proxyhttps://github.com/emersion/go-smtp-proxy
+    - https://github.com/emersion/go-smtp-proxyhttps://github.com/emersion/go-smtp-proxy
 
 #### 3.3.13 环境支持（中）
 
@@ -203,7 +201,7 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - 使用Gin 作为web服务
 - 与blockly配合使用
 - 参考资料
-  - https://www.jianshu.com/p/98965b3ff638/
+    - https://www.jianshu.com/p/98965b3ff638/
 
 #### 3.3.17 golang调用python脚本（高）
 
@@ -211,9 +209,9 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - 获取python脚本的执行结果
 - 异步执行
 - 参考文章
-  - https://studygolang.com/articles/20011
-  - https://blog.csdn.net/hjx_dou/article/details/108105895
-  - https://zhuanlan.zhihu.com/p/75441551
+    - https://studygolang.com/articles/20011
+    - https://blog.csdn.net/hjx_dou/article/details/108105895
+    - https://zhuanlan.zhihu.com/p/75441551
 
 #### 3.3.18 分发python脚本（高）
 
@@ -221,8 +219,8 @@ GitHub地址：https://github.com/Morain-Miao/Firefly-Automation-Test
 - 防止重复分发
 - 压缩传输
 - 参考资料
-  - https://www.cnblogs.com/pengshaomin/p/13081047.html
-  - https://studygolang.com/articles/9350
+    - https://www.cnblogs.com/pengshaomin/p/13081047.html
+    - https://studygolang.com/articles/9350
 
 ### 3.4 数据库设计
 
