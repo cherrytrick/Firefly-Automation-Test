@@ -2,12 +2,11 @@ package common
 
 import "fmt"
 
-var ch = make(chan string, 100)
+var ch chan string
 
 func init() {
-	for x := range ch {
-		fmt.Println(x)
-	}
+	ch = make(chan string, 100)
+	go demo()
 }
 
 /*
@@ -21,6 +20,12 @@ func PutMessage(filepath string) {
 /*
 	取出消息
 */
-func getMessage() string {
+func GetMessage() string {
 	return <-ch
+}
+
+func demo() {
+	for x := range ch {
+		fmt.Println(x)
+	}
 }

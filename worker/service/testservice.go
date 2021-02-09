@@ -16,3 +16,7 @@ func (this *Test) Insert() (id int, err error) {
 	id, err = testModel.Insert()
 	return
 }
+
+type Script struct {
+	Name string `json:"name"`
+}
